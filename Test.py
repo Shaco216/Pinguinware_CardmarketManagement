@@ -15,3 +15,5 @@ b = Test('MTG', "hellow", 3)
 
 print(a.wort)
 print(a.zahl)
+
+#Vererbung: https://www.youtube.com/watch?v=1FMCzUPaHzQ
