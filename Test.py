@@ -1,3 +1,4 @@
+from GUI import *
 
 #https://www.youtube.com/watch?v=jMQfA1cmFw8
 class Test:
@@ -17,3 +18,8 @@ print(a.wort)
 print(a.zahl)
 
 #Vererbung: https://www.youtube.com/watch?v=1FMCzUPaHzQ
+def testo(text):
+    print(text)
+window = Window("test",500,500)
+window.set_button(100,100,"neu",lambda: testo("text"))# geht noch nicht mit testo("text") weil keine methode
+mainloop()
