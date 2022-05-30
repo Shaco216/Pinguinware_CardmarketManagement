@@ -17,9 +17,14 @@ class Window:
         self.frame.title(title)
         self.frame.geometry(f"{width}x{height}")
 
-    def set_button(self, x, y, text, method):
-        myButton = Button(master=self.frame, text=text, command= lambda: method)
+    def set_button(self, x, y, text, method, innererUebergabeparameter):
+        myButton = Button(master=self.frame, text=text, command= lambda: method(innererUebergabeparameter))
         myButton.place(x=x, y=y)
 
-    def test_method(self):
-        print("testtesttest")
+    def test_method(self, testtext):
+        print(testtext)
+
+# funktioniert!!
+Findow = Window("test",500,500)
+Findow.set_button(100,100,"neu",Findow.test_method,"12kdk")
+mainloop()
