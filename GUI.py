@@ -18,7 +18,8 @@ class Window:
         self.frame.geometry(f"{width}x{height}")
 
     def set_button(self, x, y, text, method):
-        myButton = Button(master=self.frame, text=text, x=x, y=y, command= lambda: method)
+        myButton = Button(master=self.frame, text=text, command= lambda: method)
+        myButton.place(x=x, y=y)
 
     def test_method(self):
         print("testtesttest")
