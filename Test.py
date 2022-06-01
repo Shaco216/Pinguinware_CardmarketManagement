@@ -21,5 +21,6 @@ print(a.zahl)
 def testo(text):
     print(text)
 window = Window("test",500,500)
-window.set_button(100,100,"neu",testo("test"))# geht noch nicht mit testo("text") weil keine methode
-mainloop()
+window.set_button(100,100,"neu",testo,"args")# geht noch nicht mit testo("text") weil keine methode
+window.
+window.mainloop()

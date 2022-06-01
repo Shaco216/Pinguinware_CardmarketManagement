@@ -1,16 +1,8 @@
-# This is a sample Python script.
+from GUI import *
 
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Strg+F8 to toggle the breakpoint.
+Basewindow = Window("Pinguinware_CardmarketManagement",500,400)
+Basewindow.set_label(10,10,"Bitte Optionen wählen:")
+Basewindow.set_button(10,30,"Karte einfügen",Window,"Pinguinware_Karte hinzufügen",500,400)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+mainloop()

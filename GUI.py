@@ -2,9 +2,21 @@
 import tkinter
 import tkinter.messagebox
 from tkinter import *
-import customtkinter
-from customtkinter import *
 import sys
+
+# Constructorvariables
+title = ""
+width = 0
+height = 0
+
+# set_Button
+self = ""
+x = 0
+y = 0
+text = ""
+method = ""
+innererUebergabeparameter = ""
+
 
 # https://www.youtube.com/watch?v=yuuDJ3-EdNQ
 
@@ -17,14 +29,23 @@ class Window:
         self.frame.title(title)
         self.frame.geometry(f"{width}x{height}")
 
-    def set_button(self, x, y, text, method, innererUebergabeparameter):
-        myButton = Button(master=self.frame, text=text, command= lambda: method(innererUebergabeparameter))
+    def set_button(self, x, y, text, method, *args):
+        myButton = Button(master=self.frame, text=text, command= lambda: method(*args))
         myButton.place(x=x, y=y)
 
     def test_method(self, testtext):
         print(testtext)
 
+    def set_label(self, x, y, text):
+        myLabel = Label(master=self.frame, text=text)
+        myLabel.place(x=x, y=y)
+
 # funktioniert!!
-Findow = Window("test",500,500)
-Findow.set_button(100,100,"neu",Findow.test_method,"12kdk")
-mainloop()
+#Findow = Window("test",500,500)
+#Findow.set_button(100,100,"neu",Findow.test_method,"12kdk")
+#mainloop()
+
+if __name__ == "__main__":
+    Window(title,width,height)
+    Window.set_button(self, x, y, text, method, innererUebergabeparameter)
+    Window.set_label(self, x, y, text)
